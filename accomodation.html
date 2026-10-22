@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="logotantrip.png">
+<title>TanTrip Tours &amp; Safaris | Arusha</title>
+<meta name="description" content="Compass is a free, modern Bootstrap 5 website template for adventure tour operators — bookable trips, difficulty badges, guides and an enquiry flow. Dependency-free vanilla JS and fully responsive.">
+<meta name="author" content="uiCookies">
+<meta property="og:title" content="Compass — Adventure Tour Operator Template">
+<meta property="og:description" content="A rugged, modern Bootstrap 5 template for adventure travel companies: featured trips, destinations, guides and a booking enquiry flow.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="img/hero.jpg">
+<meta name="theme-color" content="#16352a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+ <title>AI Customer Support</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: #f5f7fb;
+    }
+
+    .chat-button {
+      position: fixed;
+      right: 25px;
+      bottom: 25px;
+      width: 60px;
+      height: 60px;
+      border: none;
+      border-radius: 50%;
+      background: #2563eb;
+      color: white;
+      font-size: 25px;
+      cursor: pointer;
+      box-shadow: 0 5px 20px rgba(0,0,0,.2);
+    }
+
+    .chat-box {
+      display: none;
+      position: fixed;
+      right: 25px;
+      bottom: 95px;
+      width: 360px;
+      height: 510px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 10px 40px rgba(0,0,0,.2);
+      overflow: hidden;
+    }
+
+    .chat-header {
+      background: #2563eb;
+      color: white;
+      padding: 18px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .messages {
+      height: 395px;
+      padding: 15px;
+      overflow-y: auto;
+    }
+
+    .message {
+      margin-bottom: 12px;
+      padding: 10px 13px;
+      border-radius: 12px;
+      max-width: 80%;
+      line-height: 1.4;
+    }
+
+    .user {
+      margin-left: auto;
+      background: #2563eb;
+      color: white;
+    }
+
+    .bot {
+      background: #eef2f7;
+      color: #111827;
+    }
+
+    .input-area {
+      display: flex;
+      border-top: 1px solid #ddd;
+    }
+
+    .input-area input {
+      flex: 1;
+      padding: 15px;
+      border: none;
+      outline: none;
+    }
+
+    .input-area button {
+      width: 70px;
+      border: none;
+      background: #2563eb;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+
+</head>
+<body>
+<!-- ============================================================
+     COMPASS — Free Adventure Tour Operator Template · uiCookies
+     ============================================================ -->
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header" id="siteHeader">
+  <div class="wrap">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="index.html" aria-label="Compass — home">
+       
+        <img src="logotantrip.png" alt="logo" width="100" height="70" class="logo_sticky">
+
+      </a>
+
+      <div class="nav-menu" id="navMenu">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a data-bs-toggle="modal"
+        data-bs-target="#exampleModal2"
+        ><font color="white">Treks</font></a>
+         
+      </li>
+      <li><a data-bs-toggle="modal"
+        data-bs-target="#exampleModal3"
+        ><font color="white">Safari</font></a>
+         
+      </li>
+         <li><a data-bs-toggle="modal"
+        data-bs-target="#exampleModal4"
+        ><font color="white">Things To Do</font></a>
+         
+      </li>
+        <li><a data-bs-toggle="modal"
+        data-bs-target="#exampleModal5"
+        ><font color="white">Plan Your Trip</font></a>
+         
+      </li>
+       
+          
+        </ul>
+        
+        <a href="#enquire" class="btn nav-cta btn-arrow">
+          BOOK NOW
+          <span class="btn-arrow"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-controls="navMenu" aria-expanded="false">
+        <span></span>
+      </button>
+
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <span id="top"></span>
+
+  <!-- ============================ HERO ============================ -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-bg" aria-hidden="true">
+      <img src="img/hero.jpg" width="1600" height="1000" alt="" fetchpriority="high">
+    </div>
+    
+      <div class="hero-inner">
+            
+      </div>
+  
+    </section>
+  
+ <!-- ==================== GUIDES ==================== -->
+  <section class="section guides" id="guides" aria-labelledby="guides-title">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <span class="eyebrow on-dark">Accomodation Info</span>
+          <h2 class="h-sec" id="guides-title">We're also making sure for the best Accomodation</h2>
+        </div>
+        <p class="lead">Our Team always is here to make a comfort to our Travellers through the best Accomodation matters during their adventures</p>
+      </div>
+
+      <div class="guides-grid">
+        <article class="guide reveal">
+          <div class="guide-photo">
+            <span class="guide-tag"><a href="#enquire">Book Now</a></span>
+            <img src="img/lodge.jpg" width="600" height="600" alt="Portrait of Kasper Lindqvist, lead alpine guide" loading="lazy">
+          </div>
+          <div class="guide-body">
+            <h3>Luxury Lodges</h3>
+            <div class="role"></div>
+            <div class="guide-facts">
+              <div class="f"><div class="v">Status</div><div class="k">Classic</div></div>
+              <div class="f"><div class="v">50+</div><div class="k">Capacity</div></div>
+            </div>
+          </div>
+        </article>
+        <article class="guide reveal d1">
+          <div class="guide-photo">
+            <span class="guide-tag"><a href="#enquire">Book Now</a></span>
+            <img src="img/hotel.jpg" width="600" height="600" alt="Portrait of Camila Herrera, Patagonia trekking specialist" loading="lazy">
+          </div>
+          <div class="guide-body">
+            <h3>Hotels</h3>
+            <div class="role"></div>
+            <div class="guide-facts">
+             <div class="f"><div class="v">Status</div><div class="k">Classic</div></div>
+              <div class="f"><div class="v">70+</div><div class="k">Capacity</div></div>
+            </div>
+          </div>
+        </article>
+        <article class="guide reveal d2">
+          <div class="guide-photo">
+          <span class="guide-tag"><a href="#enquire">Book Now</a></span>
+            <img src="img/hostel.jpg" width="600" height="600" alt="Portrait of Emeka Okoro, safari and wildlife lead guide" loading="lazy">
+          </div>
+          <div class="guide-body">
+            <h3>Hostels</h3>
+            <div class="role"></div>
+            <div class="guide-facts">
+              <div class="f"><div class="v">Status</div><div class="k">Classic</div></div>
+              <div class="f"><div class="v">60+</div><div class="k">Capacity</div></div>
+            </div>
+          </div>
+        </article>
+        <article class="guide reveal d3">
+          <div class="guide-photo">
+           <span class="guide-tag"><a href="#enquire">Book Now</a></span>
+            <img src="img/apartment.jpg" width="600" height="600" alt="Portrait of Sigrid Dahl, sea-kayak expedition guide" loading="lazy">
+         
+          </div>
+          <div class="guide-body">
+            <h3>Apartments</h3>
+            <div class="role"></div>
+            <div class="guide-facts">
+                <div class="f"><div class="v">Status</div><div class="k">Classic</div></div>
+              <div class="f"><div class="v">80+</div><div class="k">Capacity</div></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== HOW BOOKING WORKS ==================== -->
+  <section class="section how" id="how" aria-labelledby="how-title">
+    <div class="wrap">
+      <div class="how-head reveal">
+        <span class="eyebrow">Accomodation Info</span>
+        <h4 class="h-sec" id="how-title" style="max-width:none;">Accomodations</h4>
+        
+    </div>
+
+      <div class="steps">
+        <article class="step reveal">
+          <div class="step-num">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.8"/><path d="M20 20l-4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            <span class="idx">1</span>
+          </div>
+          <h3>Luxury Lodges</h3>
+          <p>
+           
+            <p>
+                Luxury lodges in tourism combine high-end hospitality with raw wilderness access, eco-friendly design, and exclusive cultural experiences </p>
+       
+                <p>"The lodge offers the perfect blend of luxury and convenience, ideally situated within a sprawling, lush coffee plantation.". "Our room was beautiful and spacious, with thoughtful details that made it feel cozy and luxurious."</p>
+            </article>
+        <article class="step reveal d1">
+          <div class="step-num">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 5h16v11H9l-4 3z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8 9h8M8 12h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            <span class="idx">2</span>
+          </div>
+          <h3>Hotels</h3>
+          <p>
+          An exceptional hotel experience that truly embodies luxury, excellence, and refined hospitality. "An outstanding hotel that reflects a high level of elegance and professionalism. The quality of service is exceptional, and the staff demonstrate remarkable courtesy, discretion, and attention to detail. </p>
+        </p>
+           
+
+        </article>
+        <article class="step reveal d2">
+          <div class="step-num">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 8V6a4 4 0 018 0v2M5 8h14l-1 12H6z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12v3M15 12v3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            <span class="idx">3</span>
+          </div>
+          <h3>Apartments</h3>
+          <p>
+            Indulge in comfort, privacy, and style. Our exclusive apartment offers a serene sanctuary just minutes from the city's finest sights and dining. </p>
+        
+<p><ul>
+  <li><b>- Accommodates:</b> Up to [X] guests ([X] Bedrooms, [X] Bathrooms)</li>
+  <li><b>- Highlights:</b> Panoramic views, plush linens, smart TV, and dedicated host support </li>
+<li><b>- Convenience:</b> Self check-in and local insider guide includedConvenience: Self check-in and local insider guide included</li>
+</ul></p>
+        </article>
+      </div>
+    </div>
+   
+  </section>
+
+  <section>
+
+   <p><center> 
+   
+
+ <div style="width: 60%;
+            box-sizing: border-box;
+            border: 2px solid green;
+           
+            padding: 20px;">
+
+   
+    <p>
+        
+       
+                <div class="content">
+                  
+                 <center>
+                        <p> <h3 class="title">Accomodation Info</h3></p>
+                       
+                       
+                      </center>
+                 
+                 
+     <p> Accommodation in tourism means temporary lodging provided to travellers away from home.</p>
+   <p> It includes hotels, resorts, guesthouses, hostels, homestays and other places where visitors stay during a trip.
+  </p>
+  <p>Accommodation is more than a place to sleep. It can provide bathrooms, meals, accessibility features, security and guest services. </p>
+  <p>The facilities depend on the type of property, its location and the traveller’s needs.</p>
+  <p>The history of accommodations is connected to that of civilizations . </p>
+  <p>Historically, it can be traced to the Greeks and Romans building at thermal baths and places for </p>
+
+<p> caravan travelers on the Silk Road or for crusaders going from Europe to Jerusalem.</p>
+<p> Industry data providers and statistical authorities group accommodation businesses differently depending on their purpose.</p>
+<p> Hotel descriptions may consider facilities, services, size, location and customer segment.</p>
+<p>It also distinguishes properties by their location, including urban, suburban, airport</p>
+<p> interstate (major highway), resort, and small metro/town hotels. </p>
+
+<p>Common accommodation types include hotels, motels, resorts, hostels, guesthouses, </p>
+<p>bed-and-breakfast properties, serviced apartments, holiday rentals and campsites. </p>
+
+
+
+
+
+</div>
+
+</center>
+</p>
+ 
+  </section>
+  
+<!-- Our Partners Section -->
+<section class="section clients">
+    <div class="container">
+        <div class="section-title text-center">
+            <h2>Our Partners</h2>
+            <div class="divider mx-auto my-4"></div>
+            <p>We are proud to work with our trusted partners.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="clients-slider">
+
+            <div class="client-thumb">
+                <img src="img/boardtourism.png" alt="Board of Tourism">
+            </div>
+
+            <div class="client-thumb">
+                <img src="img/thblogo.png" alt="NMB">
+            </div>
+
+            <div class="client-thumb">
+                <img src="img/ministrytourism.png" alt="Muhimbili National Hospital">
+            </div>
+
+            <div class="client-thumb">
+                <img src="img/tanapalogo.png" alt="KCMC">
+            </div>
+
+            <div class="client-thumb">
+                <img src="img/ngorongorologo.png" alt="Benjamin Mkapa">
+            </div>
+
+            <div class="client-thumb">
+                <img src="img/tripadvisorlogo.png" alt="Mawenzi">
+            </div>
+
+            <div class="client-thumb">
+                <img src="img/logotanzania.png" alt="CCBRT">
+            </div>
+
+            <div class="client-thumb">
+                <img src="img/investmentlogo.png" alt="MOI">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Slick Carousel CSS -->
+<link rel="stylesheet"
+ href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+
+<link rel="stylesheet"
+ href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+
+<!-- Custom CSS -->
+<style>
+.clients {
+    padding: 60px 0;
+    background: #fff;
+    overflow: hidden;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #222;
+}
+
+.section-title p {
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.divider {
+    width: 50px;
+    height: 4px;
+    background: #e12454;
+    border-radius: 5px;
+}
+
+.clients-slider {
+    margin: 30px 15px 0;
+}
+
+.client-thumb {
+    height: 130px;
+    margin: 10px;
+    padding: 20px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.client-thumb:hover {
+    border-color: #e12454;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transform: translateY(-4px);
+}
+
+.client-thumb img {
+    display: block;
+    max-width: 100%;
+    max-height: 85px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    margin: auto;
+}
+
+/* Slider arrows */
+.clients-slider .slick-prev,
+.clients-slider .slick-next {
+    z-index: 2;
+    width: 35px;
+    height: 35px;
+}
+
+.clients-slider .slick-prev {
+    left: -30px;
+}
+
+.clients-slider .slick-next {
+    right: -30px;
+}
+
+.clients-slider .slick-prev:before,
+.clients-slider .slick-next:before {
+    color: #e12454;
+    font-size: 30px;
+    opacity: 1;
+}
+
+/* Pagination dots */
+.clients-slider .slick-dots {
+    bottom: -35px;
+}
+
+.clients-slider .slick-dots li button:before {
+    font-size: 10px;
+    color: #e12454;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .clients {
+        padding: 40px 0;
+    }
+
+    .section-title h2 {
+        font-size: 26px;
+    }
+
+    .client-thumb {
+        height: 110px;
+        margin: 8px;
+        padding: 15px;
+    }
+
+    .client-thumb img {
+        max-height: 70px;
+    }
+
+    .clients-slider .slick-prev {
+        left: -15px;
+    }
+
+    .clients-slider .slick-next {
+        right: -15px;
+    }
+}
+</style>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<!-- Slick Carousel JS -->
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<!-- Initialize Slider -->
+<script>
+$(document).ready(function () {
+    $('.clients-slider').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        speed: 600,
+        infinite: true,
+        arrows: true,
+        dots: true,
+        pauseOnHover: true,
+        pauseOnFocus: true,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 4
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 2
+                }
+            }
+        ]
+    });
+});
+</script>
+
+
+  <!-- ==================== ENQUIRY CTA ==================== -->
+  <section class="section enquire" id="enquire" aria-labelledby="enquire-title">
+    <div class="bg" aria-hidden="true"><img src="img/cta.jpg" width="1600" height="900" alt=""></div>
+    <div class="wrap">
+      <div class="enquire-grid">
+        <div class="enquire-copy reveal">
+          <span class="eyebrow on-dark">Accomodation Booking</span>
+          <h2 id="enquire-title">Tell us where you want to wake up.</h2>
+          <p>Send an enquiry and a specialist who knows the region will get back to you within one business day — with an honest read on fitness, timing and cost.</p>
+          <ul class="enquire-points">
+            <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> A real specialist replies within one day</li>
+            <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> No deposit, no obligation to enquire</li>
+            <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> Free date changes up to 60 days out</li>
+          </ul>
+        </div>
+
+        <div class="form-card reveal d1">
+          <h3>Accomodation Booking</h3>
+          <p class="fc-sub">Fill the following required Information to make an Accomodation Booking</p>
+          <div class="form-ok" id="formOk" role="status">Thanks — your enquiry is in. A TanTrip Tours specialist will be in touch within one business day.</div>
+          <form id="enquiryForm" novalidate>
+            <div class="form-row">
+              <div class="field">
+                <label for="ef-name">Full name</label>
+                <input type="text" id="ef-name" name="name" autocomplete="name" required>
+                <span class="err">Please tell us your name.</span>
+              </div>
+              <div class="field">
+                <label for="ef-name">Phone</label>
+                <input type="number" id="ef-name" name="name" autocomplete="name" required>
+                <span class="err">Phone</span>
+              </div>
+              <div class="field">
+                <label for="ef-email">Email</label>
+                <input type="email" id="ef-email" name="email" autocomplete="email" required>
+                <span class="err">Enter a valid email address.</span>
+              </div>
+
+               <div class="field">
+                <label for="ef-email">Preferred Month</label>
+               <select id="ef-trip" name="trip" required>
+                  <option value="">Preferred Month...</option>
+                  <option>January</option>
+                  <option>February</option>
+                  <option>March</option>
+                  <option>April</option>
+                  <option>May</option>
+                  <option>June</option>
+                  <option>July</option>
+                  <option>August</option>
+                  <option>September</option>
+                  <option>October</option>
+                  <option>November</option>
+                  <option>December</option>
+                
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="ef-trip">Accomodation Type</label>
+                <select id="ef-trip" name="trip" required>
+                  <option value="">Accomodation Type...</option>
+                  <option>Luxury Lodge</option>
+                  <option>Hotels</option>
+                  <option>Hostel</option>
+                  <option>Apartment</option>
+                </select>
+                <span class="err">Pick the closest trip.</span>
+              </div>
+              <div class="field">
+                <label for="ef-group">Age Group</label>
+                <select id="ef-group" name="group" required>
+                  <option value="">Age Group…</option>
+                  <option>Kids</option>
+                  <option>Adults</option>
+                  <option>Elders</option>
+                
+                </select>
+                <span class="err">Please Put your Age Group</span>
+              </div>
+            </div>
+
+             <div class="field">
+                <label for="ef-name">Number of People</label>
+                <input type="number" id="ef-name" name="name" autocomplete="name" required>
+                <span class="err">Number of People</span>
+              </div>
+            <div class="field">
+              <label for="ef-msg">Tell Us about Your Trip</label>
+              <textarea id="ef-msg" name="message" required></textarea>
+              <span class="err">A line or two helps us prepare.</span>
+            </div>
+            <button type="submit" class="btn btn-arrow" style="width:100%;">Book Now <span class="btn-arrow"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button>
+            <p class="form-note">By sending, you agree to be contacted about your Accomodation Booking.
+              </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ==================== REVIEWS ==================== -->
+  <section class="section reviews" id="reviews" aria-labelledby="reviews-title">
+    <div class="wrap">
+      <div class="reviews-head reveal">
+        <div>
+          <span class="eyebrow">Our Five Stars Accomodations</span>
+          <h2 class="h-sec" id="reviews-title">Book with our Accomodations</h2>
+        </div>
+        <div class="slider-nav">
+          <button class="slider-btn" id="rPrev" aria-label="Previous review"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button class="slider-btn" id="rNext" aria-label="Next review"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </div>
+
+      <div class="slider reveal">
+        <div class="slider-track" id="rTrack" tabindex="0" aria-label="Traveller reviews, scrollable">
+          <figure class="review">
+            <p> <div class="stars" aria-label="Rated 5 out of 5">★★★★★ Luxury Lodge</div>
+             </p>
+            <img src="img/lodgebest.jpg" width="420" height="300">
+        
+            
+          </figure>
+           <figure class="review">
+            <p> <div class="stars" aria-label="Rated 5 out of 5">★★★★★ Hotel</div>
+             </p>
+            <img src="img/hotelbest.jpg" width="420" height="300">
+        
+            
+          </figure>
+          <figure class="review">
+            <p> <div class="stars" aria-label="Rated 5 out of 5">★★★★★ Hostel</div>
+             </p>
+            <img src="img/hostelbest.jpg" width="420" height="300">
+        
+            
+          </figure>
+          <figure class="review">
+            <p> <div class="stars" aria-label="Rated 5 out of 5">★★★★★ Apartment</div>
+             </p>
+            <img src="img/apartmentbest.jpg" width="420" height="300">
+        
+            
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+</main>
+
+ <button class="chat-button" onclick="toggleChat()">💬</button>
+
+  <div class="chat-box" id="chatBox">
+    <div class="chat-header">
+    <font size=3>TanTrip Tours & Safaris AI Assistant</font>
+    </div>
+
+    <div class="messages" id="messages">
+      <div class="message bot">
+        Hello! 👋 Welcome to TanTrip Tours and Safaris. How can I help you today?
+      </div>
+    </div>
+
+    <div class="input-area">
+      <input
+        id="messageInput"
+        type="text"
+        placeholder="Type your message..."
+        onkeydown="if(event.key === 'Enter') sendMessage()"
+      />
+
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <script>
+    function toggleChat() {
+      const chat = document.getElementById("chatBox");
+
+      chat.style.display =
+        chat.style.display === "block" ? "none" : "block";
+    }
+
+    async function sendMessage() {
+      const input = document.getElementById("messageInput");
+      const messages = document.getElementById("messages");
+
+      const message = input.value.trim();
+
+      if (!message) return;
+
+      // Show user message
+      messages.innerHTML += `
+        <div class="message user">
+          ${escapeHtml(message)}
+        </div>
+      `;
+
+      input.value = "";
+
+      // Loading message
+      const loading = document.createElement("div");
+      loading.className = "message bot";
+      loading.textContent = "Typing...";
+      messages.appendChild(loading);
+
+      messages.scrollTop = messages.scrollHeight;
+
+      try {
+        const response = await fetch("/api/chat", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            message: message
+          })
+        });
+
+        const data = await response.json();
+
+        loading.remove();
+
+        messages.innerHTML += `
+          <div class="message bot">
+            ${escapeHtml(data.reply)}
+          </div>
+        `;
+
+      } catch (error) {
+        loading.textContent =
+          "Please wait while We're working on your Question!";
+      }
+
+      messages.scrollTop = messages.scrollHeight;
+    }
+
+    function escapeHtml(text) {
+      const div = document.createElement("div");
+      div.textContent = text;
+      return div.innerHTML;
+    }
+  </script>
+
+ <!-- Modal -->
+<div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-6 fw-bold fs-5" id="exampleModalLabel1">TOTAL CASH COLLECTION 1</h1>
+      <hr>
+          
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        
+        <div class="modal-body">
+            
+          <ul class="molist">
+            
+            <li><b><a href=""><font size=2 color="black">Total Cash Collection [ date Range: From 1 January - 31 December 2021]</font></a></b></li>
+        <li><b><a href=""><font size=2 color="black">Total Cash Collection [ date Range: From 1 January - 31 December 2022]</font></a></b></li>
+        <li><b><a href=""><font size=2 color="black">Total Cash Collection [ date Range: From 1 January - 31 December 2023]</font></a></b></li>
+        
+        
+              <hr>
+              
+            </ul>
+
+          </ul>
+          
+        
+          <p><b> <font color="black" size=2>Please, Click to View Total Cash Collection for a Certain Time Range</font></b></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-6 fw-bold fs-5" id="exampleModalLabel1">TREKS</h1>
+      <hr>
+          
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        
+        <div class="modal-body">
+            
+          <ul class="molist">
+            
+            <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="orange" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z" clip-rule="evenodd"/>
+</svg>
+ <b>
+        <font size=2 color="black">Kilimanjaro Route</font></b>
+                <ul>
+                  <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+
+ <a href="marangu.html"><font color="black">Marangu Route</font></a></li>
+                     <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="machame.html"><font color="black">Machame Route</font></a></li>
+                     <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="rongai.html"><font color="black">Rongai Route</font></a></li>
+                     <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="umbwe.html"><font color="black">Umbwe Route</font></a></li>
+                      <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="lemosho.html"><font color="black">Lemosho Route</font></a></li>
+                     <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="northerncircuit.html"><font color="black">Northern Circuit Route</font></a></li>
+                 <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="shira.html"><font color="black">Shira Route</font></a></li>
+              
+              
+                    </ul>
+      </li>
+        <li>
+ <b><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="orange" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z" clip-rule="evenodd"/>
+</svg> <a href=""><font size=2 color="black">Mount Meru</font></a></b></li>
+        <li>
+ <b><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="orange" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z" clip-rule="evenodd"/>
+</svg> <a href=""><font size=2 color="black">Kilimanjaro Weather</font></a></b></li>
+         <li>
+ <b><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="orange" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z" clip-rule="evenodd"/>
+</svg> <a href=""><font size=2 color="black">Best Time To Climb</font></a></b></li>
+        <li>
+ <b><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="orange" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z" clip-rule="evenodd"/>
+</svg> <a href=""><font size=2 color="black">Trekking Preparations</font></a></b></li>
+        
+         <li>
+ <b><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="orange" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z" clip-rule="evenodd"/>
+</svg> <a href=""><font size=2 color="black">Mt. Kilimanjaro Gears</font></a></b></li>
+        <li>
+ <b><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="orange" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z" clip-rule="evenodd"/>
+</svg> <a href=""><font size=2 color="black">Kilimanjaro Fitness</font></a></b></li>
+         <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="orange" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z" clip-rule="evenodd"/>
+</svg> <b><font size=2 color="black">Attitude Sickness</font></a></b></li>
+        
+            </ul>
+
+          </ul>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- Modal -->
+<div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-6 fw-bold fs-5" id="exampleModalLabel3">SAFARI</h1>
+      <hr>
+          
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        
+        <div class="modal-body">
+            
+          <ul class="molist">
+            
+            <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="orange" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z" clip-rule="evenodd"/>
+</svg> <b><a href=""><font size=2 color="black">Tanzania Safari</font></a></b>
+                <ul>
+                  <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="1to4safari.html"><font color="black">1 To 4 Days Trip Safari</font></a></li>
+                     <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="5to8safari.html"><font color="black">5 To 8 Trip Safari</font></a></li>
+                     <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="9to14safari.html"><font color="black">9 To 14 Trip Safari</font></a></li>
+                  
+              
+                    </ul></li>
+        <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="orange" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z" clip-rule="evenodd"/>
+</svg> <b><a href=""><font size=2 color="black">Wildebeest Migration</font></a></b>
+         <ul>
+                  <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="5dayswildbeest.html"><font color="black">5 Days Wildbeest Migration Safari</font></a></li>
+                   <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="7dayswildbeest.html"><font color="black">7 Days Wildbeest Migration Safari</font></a></li>
+                   <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="9dayswildbeest.html"><font color="black">9 Days Wildbeest Migration Safari</font></a></li>
+                   <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="14dayswildbeest.html"><font color="black">14 Days Wildbeest Migration Safari</font></a></li>
+                   
+              
+                    </ul></li>
+        <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="orange" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z" clip-rule="evenodd"/>
+</svg> <b><a href=""><font size=2 color="black">Kenya Tanzania Safari</font></a></b>  <ul>
+                  <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="8to12kenyatanzania.html"><font color="black">8 To 12 Days Kenya Tanzania Safari</font></a></li>
+                 <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="14kenyatanzania.html"><font color="black">14 Days Kenya Tanzania Safari</font></a></li>
+               
+              
+                    </ul></li>
+        <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="orange" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z" clip-rule="evenodd"/>
+</svg> <b><a href=""><font size=2 color="black">Safari & Zanzibar</font></a></b>
+        <ul>
+                  <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="6to8zanzibar.html"><font color="black">6 To 8 Days Safari & Zanzibar</font></a></li>
+                  <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg> <a href="12zanzibar.html"><font color="black">12 Days Safari & Zanzibar</font></a></li>
+                
+              
+                    </ul></li>
+        <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="orange" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z" clip-rule="evenodd"/>
+</svg> <b><a href=""><font size=2 color="black">Southern Tanzania</font></a></b>
+         <ul>
+                  <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="3to9southern.html"><font color="black">6 To 8 Days Southern Tanzania Safari</font></a></li>
+                  
+              
+                    </ul></li>
+        <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="orange" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z" clip-rule="evenodd"/>
+</svg> <b><a href=""><font size=2 color="black">Gorilla Trekking</font></a></b></li>
+       
+            </ul>
+
+          </ul>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-6 fw-bold fs-5" id="exampleModalLabel4">THINGS TO DO</h1>
+      <hr>
+          
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        
+        <div class="modal-body">
+            
+          <ul class="molist">
+            
+            <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="orange" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z" clip-rule="evenodd"/>
+</svg> <b><a href=""><font size=2 color="black">Activities</font></a></b>
+             <ul>
+                  <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="walkingsafari.html"><font color="black">Walking Safari</font></a></li>
+                     <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="wildlifesafari.html"><font color="black">Wildlife Safari</font></a></li>
+                     <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="mountainbiking.html"><font color="black">Mountain Biking</font></a></li>
+                     <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="photographicsafari.html"><font color="black">Photographic Safari</font></a></li>
+                      <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="historicalsites.html"><font color="black">Historical Sites</font></a></li>
+                     <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="shopping.html"><font color="black">Shopping & Nightlife</font></a></li>
+                 <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="fishing.html"><font color="black">Fishing</font></a></li>
+                <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="culturaltourism.html"><font color="black">Cultural Tourism</font></a></li>
+                      <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="diving.html"><font color="black">Diving & Snorkelling</font></a></li>
+                     <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="conferencetourism.html"><font color="black">Conference Tourism</font></a></li>
+                 <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="balloonsafari.html"><font color="black">Balloon Safari</font></a></li>
+                <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="beachholiday.html"><font color="black">Beach Holiday</font></a></li>
+              
+              
+                    </ul></li>
+        <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="orange" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z" clip-rule="evenodd"/>
+</svg> <b><a href=""><font size=2 color="black">Holiday Types</font></a></b>
+          <ul>
+                  <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="luxurysafari.html"><font color="black">Luxury Safari</font></a></li>
+                     <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="campingsafari.html"><font color="black">Camping Safari</font></a></li>
+                     <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="weddingsafari.html"><font color="black">Wedding Safari</font></a></li>
+                     <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="nightgamedrives.html"><font color="black">Night Game Drives</font></a></li>
+                    
+              
+                    </ul></li>
+       
+        
+            </ul>
+
+          </ul>
+          
+        
+       
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-6 fw-bold fs-5" id="exampleModalLabel5">PLAN YOUR TRIP</h1>
+      <hr>
+          
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        
+        <div class="modal-body">
+            
+           
+          <ul class="molist">
+            
+            <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="orange" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z" clip-rule="evenodd"/>
+</svg> <b><a href="visa.html"><font size=2 color="black">VISA Information</font></a></b></li>
+        <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="orange" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z" clip-rule="evenodd"/>
+</svg> <b><a href="accomodation.html"><font size=2 color="black">Accomodations</font></a></b></li>
+        <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="orange" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z" clip-rule="evenodd"/>
+</svg> <b><a href="packing.html"><font size=2 color="black">Packing Guide</font></a></b></li>
+         <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="orange" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z" clip-rule="evenodd"/>
+</svg> <b><a href="faq.html"><font size=2 color="black">FAQ's</font></a></b></li>
+        
+        
+                            
+            </ul>
+
+          </ul>
+          
+        
+        
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+
+
+
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="#top" aria-label="Compass — home">
+            <img src="logotantrip.png" alt="logo" width="40" height="40" class="logo_sticky">
+
+          About Us
+        </a>
+        <p>Discover the pureness of nature and the circle of life as they appear right in front of you. See the world at 5896m Mt Kilimanjaro a magnificent sights.</p>
+        <div class="footer-social">
+          <a href="#top" aria-label="Compass on Instagram"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/></svg></a>
+          <a href="#top" aria-label="Compass on YouTube"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4" stroke="currentColor" stroke-width="1.8"/><path d="M10 9.5l5 2.5-5 2.5z" fill="currentColor"/></svg></a>
+          <a href="#top" aria-label="Compass on Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.6l.4-3h-3V8.1c0-.9.3-1.5 1.6-1.5H17V4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.1H8.2v3h2.6v8z"/></svg></a>
+          <a href="#top" aria-label="Compass on X"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 3h3l-7.2 8.2L22 21h-6.3l-4.9-6.4L4.9 21H2l7.7-8.8L2 3h6.5l4.4 5.8zm-1.1 16h1.7L7.6 4.8H5.8z"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Information</h4>
+        <ul>
+          <li><a href="#tours">Mount Kilimanjaro Route</a></li>
+          <li><a href="#tours">Tanzania Safari</a></li>
+          <li><a href="#tours">Kenya Tanzania Safari</a></li>
+          <li><a href="#tours">Zanzibar Beach</a></li>
+         
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Our Menu</h4>
+        <ul>
+          <li><a href="#why">Accomodation</a></li>
+          <li><a href="#guides">VISA Information</a></li>
+          <li><a href="#how">FAQ's</a></li>
+          <li><a href="#reviews">Packing Guide</a></li>
+          <li><a href="#enquire">Book Now</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Get in touch</h4>
+        <ul class="footer-contact">
+          <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-5.7 7-11a7 7 0 10-14 0c0 5.3 7 11 7 11z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.8"/></svg> Arusha, TANZANIA</li>
+          <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 5c0 8.3 6.7 15 15 15v-3.5l-4-1.5-2 2a12 12 0 01-6-6l2-2L11.5 5H4z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg> <a href="https://wa.me/255766909822"><font color="white">(+255) 766 909 822</font></a </li>
+          <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><a href="mailto: info@tantriptours.com"><font color="white">info@tantriptours.com</font></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; 2026 TanTrip Tours & Safari. All rights reserved.</span>
+      <span>Developed by <a href="https://fmpiza.github.io/webfridolin" rel="noopener"><font color="orange">Fridolin</font></a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/vendor/bootstrap.bundle.min.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>

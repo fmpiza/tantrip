@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="logotantrip.png">
+<title>TanTrip Tours &amp; Safaris | Arusha</title>
+<meta name="description" content="Compass is a free, modern Bootstrap 5 website template for adventure tour operators — bookable trips, difficulty badges, guides and an enquiry flow. Dependency-free vanilla JS and fully responsive.">
+<meta name="author" content="uiCookies">
+<meta property="og:title" content="Compass — Adventure Tour Operator Template">
+<meta property="og:description" content="A rugged, modern Bootstrap 5 template for adventure travel companies: featured trips, destinations, guides and a booking enquiry flow.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="img/hero.jpg">
+<meta name="theme-color" content="#16352a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+<link rel="stylesheet" href="css/style.css">
+ <title>AI Customer Support</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: #f5f7fb;
+    }
+
+    .chat-button {
+      position: fixed;
+      right: 25px;
+      bottom: 25px;
+      width: 60px;
+      height: 60px;
+      border: none;
+      border-radius: 50%;
+      background: #2563eb;
+      color: white;
+      font-size: 25px;
+      cursor: pointer;
+      box-shadow: 0 5px 20px rgba(0,0,0,.2);
+    }
+
+    .chat-box {
+      display: none;
+      position: fixed;
+      right: 25px;
+      bottom: 95px;
+      width: 360px;
+      height: 510px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 10px 40px rgba(0,0,0,.2);
+      overflow: hidden;
+    }
+
+    .chat-header {
+      background: #2563eb;
+      color: white;
+      padding: 18px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .messages {
+      height: 395px;
+      padding: 15px;
+      overflow-y: auto;
+    }
+
+    .message {
+      margin-bottom: 12px;
+      padding: 10px 13px;
+      border-radius: 12px;
+      max-width: 80%;
+      line-height: 1.4;
+    }
+
+    .user {
+      margin-left: auto;
+      background: #2563eb;
+      color: white;
+    }
+
+    .bot {
+      background: #eef2f7;
+      color: #111827;
+    }
+
+    .input-area {
+      display: flex;
+      border-top: 1px solid #ddd;
+    }
+
+    .input-area input {
+      flex: 1;
+      padding: 15px;
+      border: none;
+      outline: none;
+    }
+
+    .input-area button {
+      width: 70px;
+      border: none;
+      background: #2563eb;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+
+</head>
+<body>
+<!-- ============================================================
+     COMPASS — Free Adventure Tour Operator Template · uiCookies
+     ============================================================ -->
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header" id="siteHeader">
+  <div class="wrap">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="index.html" aria-label="Compass — home">
+       
+        <img src="logotantrip.png" alt="logo" width="100" height="70" class="logo_sticky">
+
+      </a>
+
+      <div class="nav-menu" id="navMenu">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a data-bs-toggle="modal"
+        data-bs-target="#exampleModal2"
+        ><font color="white">Treks</font></a>
+         
+      </li>
+      <li><a data-bs-toggle="modal"
+        data-bs-target="#exampleModal3"
+        ><font color="white">Safari</font></a>
+         
+      </li>
+         <li><a data-bs-toggle="modal"
+        data-bs-target="#exampleModal4"
+        ><font color="white">Things To Do</font></a>
+         
+      </li>
+        <li><a data-bs-toggle="modal"
+        data-bs-target="#exampleModal5"
+        ><font color="white">Plan Your Trip</font></a>
+         
+      </li>
+       
+          
+        </ul>
+        
+        <a href="#enquire" class="btn nav-cta btn-arrow">
+          BOOK NOW
+          <span class="btn-arrow"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-controls="navMenu" aria-expanded="false">
+        <span></span>
+      </button>
+
+
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <span id="top"></span>
+
+  <!-- ============================ HERO ============================ -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-bg" aria-hidden="true">
+      <img src="img/hero.jpg" width="1600" height="1000" alt="" fetchpriority="high">
+    
+    
+    </div>
+    
+   
+      <div class="hero-inner">
+    
+       
+      </div>
+  
+    </section>
+
+ 
+<p><div class="how-head reveal">
+       <h3> <span class="eyebrow">Kilimanjaro Gears</span></h3>
+       
+    </div>
+    </p>
+
+  <!-- ==================== HOW BOOKING WORKS ==================== -->
+  
+
+<div class="container">
+      <div class="row">
+
+        <div class="col-lg-8">
+
+          <!-- Blog Details Section -->
+          <section id="blog-details" class="blog-details section">
+            <div class="container">
+
+              <article class="article">
+<p>
+    <a href="img/gears.jpg" class="swipebox" title=""><img width="950" height="400" src="img/gears.jpg" class="attachment-shop_single size-shop_single wp-post-image" alt="" title="" draggable="false"></a>
+
+</p>
+
+               
+               
+               <div style="width: 100%;
+            box-sizing: border-box;
+            border: 2px solid green;
+           
+            padding: 20px;">
+
+   
+    <p>
+        
+       
+                <div class="content">
+                  
+        <p> <h3 class="title">Kilimanjaro Equipment List (Gears)</h3></p>
+
+               
+
+                <div class="content">
+                  <p>
+                    <ul>
+                        <li>
+                            But there is no way around it, you need good gear for Kilimanjaro. Being cold, wet and miserable does not increase your summit chances. Trust me on that one.
+</li>
+                    
+                 
+                    </ul>
+                  </p>
+                  <p>
+             The Kilimanjaro equipment list below has all the essential gear that you need for your Kilimanjaro climb. 
+</p>
+<p> 
+    It tells you why you need it and a bit about the different options you have when buying equipment specifically for your Kilimanjaro climb.
+</p>
+<p> 
+    (This is not meant as a Kilimanjaro packing checklist. A proper checklist to use when you are actually packing is included in the free guide.)
+</p>
+
+               
+              
+                <p><b>Camping Equipment for Kilimanjaro</b>  </p>
+                <p>
+                  Any half decent Kilimanjaro tour operator should supply the tents. Tents on Kilimanjaro need to be able to take a beating, so if you have to take your own, make sure it is one that is meant for such conditions (extended bad weather, strong winds and very rocky ground). You can not afford to have any leaks or tears, zips that don't keep wind out etc.
+                </p>
+                <p>
+                Invest in a good thermal sleeping mat. Often you can hire those from the operators. (You don't need this on the Marangu route. You still need a good sleeping bag, though...)</p>
+               
+              <p>
+                Invest in a good sleeping bag that's rated for at least -10°C/four seasons. Down sleeping bags are great. They are light, pack down small and definitely keep you warm at night, but down is of course expensive. Again, you can usually hire sleeping bags, since the real warm ones don't come cheap and most people will not need theirs again after this trek. </p>
+              
+              
+                <p>
+                    A sleeping bag liner can help with temperatures. I have a silk liner and it makes a huge difference at the higher camps. I wake up every time it slips of my shoulders. A liner is also good for people who are squeamish about renting a sleeping bag. (Or if you plan to backpack through Tanzania before or after and stay in more dubious accommodation...)
+                </p>
+
+                <p>
+                    You can also get more expensive fleecy liners that are made specifically for warmth and are made from the same material as the filling of synthetic sleeping bags. They may be a good option if you already have a good three seasons bag.
+                </p>
+
+
+              <p><b>Footwear - Boots</b></p>
+                 <p>
+                 The most important piece of equipment for Kilimanjaro is a pair of good goretex trekking boots. Some people recommend leather, but leather is much heavier and the weight on your feet makes a big difference in the amount of energy you expend when walking.</p>
+               
+              
+            <p>
+                The boots need to be absolutely waterproof and breathable, very comfortable, and well worn in!!! The very last thing you need are blisters or sore feet!</p>
+               
+            <p> 
+             If you buy new boots, make sure they are big enough to accommodate the extra pair(s) of socks you'll be wearing during summit night.
+</p>
+<p>
+    If boots are too tight it hinders circulation and your feet freeze... Also make sure boots are high enough. You will need that ankle support, especially on the descent from the summit.
+</p>
+<p>
+    Take thick, thermal socks (two pairs) and thinner/normal socks. If your feet tend to sweat you need a fresh pair (or freshly rinsed and dried pair) every day. Salt means grit and abrasion. Make sure you always wear dry socks. Keeping your feet in good condition is essential!
+
+</p>
+
+<p> 
+   <b>Outer Clothing Layers</b> 
+</p>
+<p>
+    <b>Good Rain protection</b> is also essential equipment on Kilimanjaro. Once your gear is wet you have no hope of drying it again, and there is a very good chance that you'll get rained on on the first day or two.
+</p>
+<p>
+    This outermost layer should be high quality and breathable, and big enough to go over all your other clothes on summit night (when it will keep the wind off and add warmth).
+v Get rain protection for your pack as well. Either get an outer cover or make sure everything inside is protected in plastic bags. (My rain jacket is big enough to wear over my day pack. As for my other Kilimanjaro equipment, I only climb with quality operators who will ensure that while on Kilimanjaro, my gear is protected from moisture. Find out how your Kilimanjaro tour company carries your stuff up the mountain.)
+</p>
+<p>
+    <b>A down jacket</b> is a wonderful piece of equipment for Kilimanjaro. Not only during summit night but also to sit around at dinner time when your body doesn't generate heat through movement. (I find the evenings in camp by far the coldest part of everything...)
+</p>
+<p>
+    You can't beat down, but it's expensive. If you'll never need it again and if you can't hire it (I always hire), then a few warm fleeces will do the job, provided you wear some windbreaker on the outside.
+
+</p>
+<p>
+   <b>Fleeces </b>are great because they give a lot of warmth for little weight. Two or even three thinner ones are preferable over one single thick fleece, not only because you can better adjust your clothing to the temperatures. The main reason is that the air between clothing layers provides better insulation than the clothes. Wearing many layers is the key to staying warm on Kilimanjaro. 
+</p>
+<p>
+    I certainly recommend to invest in some quality trekking pants. Mine are wind resistent, water resistent (not quite water proof but it takes heavy rain before it soaks in) and they even repel dirt (which isn't essential, but nice if you spend a few months in Tanzania living out of a pack.) They weigh next to nothing and are very comfortable to wear. I can also unzip the legs and wear the pants as shorts.
+</p>
+<p>
+    Two pairs are enough. Make sure your pants are big enough to comfortably wear over several thermal under layers.
+
+</p>
+<p>
+    Don't take heavy pants like jeans or similar. They offer no benefit, they only add weight and they will never dry if they get damp or wet.
+</p>
+
+<p>
+    <b>Thermal layers</b>
+</p>
+<p>
+   <b> Thermal under layers have two functions.</b> They insulate against cold and they draw moisture away from the body (they are breathable or "wicking"). But beware, that wicking effect only works if ALL the layers you wear do it. Most good fleeces are breathable and your rainwear also should be.
+</p>
+<p>
+As explained above, the key to staying warm on Kilimanjaro is wearing many layers, so bring a couple of pairs of long johns and long sleeved thermal tops. I use one pair to walk in and one bone dry pair to sleep in and to also wear on summit night.
+</p>
+<p>
+I can recommend the Icebreaker brand from New Zealand, because as the lady in the specialist shop who sold it to me explained: "You can wear them every day for a whole month and you'll still never be lonely." They don't smell :-).
+    </p>
+    <p>
+        Everybody is different in their tolerance for cold, so do use your own judgment regarding how many and how high quality thermal under layers you take. Thermals come in different ratings. I live in the tropics and only the best and warmest will do for me. I also have a nice, comfortable pair of fleece pants to go over the long johns and under the trekking pants.
+
+        </p>
+        <p>
+            Whatever you take, do make sure you'll have dry clothes on summit night.
+
+            </p>
+            <p>
+                <b>Additional Kilimanjaro equipment for the cold</b>
+            </p>
+            <p>
+                You also need gloves and a wooly hat, and maybe something to cover your ears if the hat doesn't.
+
+                </p>
+                <p>
+                  If you have light weight trekking pants you don't need shorts. I sure wouldn't take any. It's freezing from the first night.
+
+                </p>
+                    
+                <p>
+                    You might want some <b>light shirt</b> for the time in the humid rainforest, but beware. The worst sunburns don't happen on the summit, they happen on day one. I recommend a collared shirt. At least make sure you slap a generous amount of sunscreen on the back of your neck and, if needed, the shoulders.
+                </p>
+                <p>
+
+                    <b>Sun protection</b>
+                </p>
+                <p>
+                    Get the best sunscreen money can buy and start using it from day one. Don't underestimate the power of the sun at altitude. Even 2000 m or 7000 ft is enough altitude to make a serious difference in the amount of damaging UV rays that reach your skin.
+                </p>
+                <p>
+
+                    Also get something for your lips! Lips do not have pigmentation to protect them from the sun, and the wind, dust and dry air will also punish them.
+                </p>
+                <p>
+                    And get some very good sunglasses, especially for the summit day. You don't want to become snow blind. Wrap around glasses or glasses with side protection are best, not only to keep out as much harmful radiation as possible, but also to protect your eyes from wind and dust.
+                </p>
+                <p>
+                    Take a sun hat or cap for the first days. You'll need it for the rest of your stay in Tanzania anyway.
+                    </p>
+
+
+                       <p>
+                                <b>Toiletries</b>
+                            </p>
+                            <p>
+                               Don't go overboard! Toothbrush, toothpaste, a little soap, deodorant and a mini towel are all the toiletries you'll have use for.
+
+                            </p>
+                            <p>
+                                Talking of towels, don't take the beach towel you brought for Zanzibar up on the mountain. Once it's wet it won't dry again. The ultralight travel towels really come into their own on Kilimanjaro.
+                                </p>
+
+                                <p>
+
+                                    <b>Take enough toilet paper!</b>
+                                </p>
+                                <p>
+                                    And girls, the altitude can play havoc with your monthly cycle, so bring whatever you need, just in case.
+                                </p>
+                                <p>
+                                    <b>Other Kilimanjaro Equipment</b>
+                                </p>
+                                <p>
+                                    <b>Walking poles</b> are must have equipment on Kilimanjaro, especially for the way down. If you've never used poles before, get used to them on the way up, so they will protect your knees on the way down.
+                                    </p>
+                                    <p>
+                                        After rejecting poles for years as something for oldies or city slickers with too much money, I eventually tried them for the sake of my knees. I took to using poles like a fish takes to water. Why did nobody ever tell me that they save your legs 30% energy on the way up? I don't climb any mountains without them now. But my mom needed three treks at home until she got used to hers...
+                                    </p>
+                                    <p>
+                                        I don't think you need any fancy poles. Wooden sticks did the job in the past and did it well. Collapsible poles are handy if you lug your own around the world, but you can hire poles from your operator or even get them at Machame or Marangu gate (though it may be the old style wooden version...)
+                                    </p>
+                                    <p>
+                                        <b>A head torch</b> is essential during summit night and also comes in handy around camp. Take enough batteries and keep them warm on summit night as batteries like to die in the cold.
+
+                                    </p>
+                                    <p>
+
+                                       Most people carry water bottles for about three litres. Two litres is the absolute minimum. (Some people say you need more on summit day, we always needed less. This does depend on your personal needs. People who naturally sweat a lot will need more.) 
+                                    </p>
+                                    <p>
+                                        You will be able to refill your bottles during the day and in the evenings. The only exception is the summit attempt when your water has to last you to the peak and back down to camp.
+                                        </p>
+                                        <p>
+                                            Most people prefer platypus type water bladders/camel backs. It makes it easy to drink as you're walking. (Actually, easy is not the right word, because at altitude you will find it hard to walk and to hold your breath while drinking and to expend the extra energy to suck out of that bladder, all at the same time... Just you wait :-).)
+                                        </p>
+                                        <p>
+                                            Still, most people find a camel back is more convenient than having a bottle in your pack.
+
+                                        </p>
+                                        <p>
+                                            I never used a camel back. I can't stand those things. I carry one or two smaller bottles on the outside of my pack where I or a climbing partner can easily get to them, and refill or change them during breaks.
+                                            </p>
+                                            <p>
+
+                                                If you do get a camel back make sure it is fully insulated, including the tubing. Also make sure that during the summit night you ALWYAS blow the water back into the bladder or it will freeze in the tube and mouth piece.
+                                            </p>
+                                            <p>
+                                                Add a Sigg style metal/aluminium water bottles to your Kilimanjaro equipment list. Why? They double as hot water bottles at night. (All water on Kilimanjaro needs to be boiled for drinking, and your team should boil a big tub every night to fill all bottles.)
+                                            </p>
+                                            <p>
+                                                Wrap any damp clothing items that you want to dry around the bottle and shove it in the bottom of your sleeping bag before you climb in. Bliss, and your clothes are dry in the morning.
+                                            </p>
+                                            <p>
+                                                Most Kilimanjaro equipment lists recommend water filters or purification tablets. I don't see the point. Your team should be boiling enough water for drinking for everyone. Before you buy any additional filter or tablets, consider that all your food and the soup and the tea and coffee etc. is also made with water that has only been boiled.
+
+                                            </p>
+                                            <p>
+                                                As long as the water has been boiled properly it is safe.
+                                                </p>
+                                                <p>
+                                                    Having said that, if you climb with one of the budget operators, DO take a filter or iodine tablets. (Purification tablets need to be iodine, not chlorine.) Carrying all the water and boiling it costs money for porters and fuel, so on budget climbs you need to get and purify much of your water yourself. Even if they don't make you get it, it is safer to purifiy your own. Depending on your other plans you may also need a filter/tablets before and after your climb.
+                                                </p>
+                                                <p>
+                                                    You should also have a medical kit in your Kilimanjaro equipment, especially when doing budget climbs! I will write a separate page about that.
+                                                    </p>
+            
+</div>
+
+
+
+
+
+  
+    
+
+
+               
+                                     
+                          
+                                                    
+
+
+                                     
+                                                  </div><!-- End post content -->
+
+            </article>
+
+            </div>
+          </section><!-- /Blog Details Section -->
+
+       
+        
+        </div>
+
+        <div class="col-lg-4 sidebar">
+
+          <div class="widgets-container">
+
+            <!-- Blog Author Widget -->
+            <div class="blog-author-widget widget-item">
+
+              <div class="d-flex flex-column align-items-center">
+                <div class="d-flex align-items-center w-100">
+                 
+                  <div>
+                 
+                  </div>
+                </div>
+
+              </div>
+
+            </div><!--/Blog Author Widget -->
+
+            <!-- Search Widget -->
+           
+            <!-- Categories Widget -->
+            
+             <!-- Recent Posts Widget 2 -->
+            <div class="recent-posts-widget-2 widget-item">
+
+          
+
+</p>
+<hr>
+<p>
+  <div style="
+  display:block;
+  width:100%;
+  box-sizing:border-box;
+  padding:15px 45px;
+  background:linear-gradient(135deg,#86efac,#22c55e,#15803d);
+  color:white;
+  font-size:22px;
+  font-weight:bold;
+  letter-spacing:2px;
+  text-align:center;
+  border-radius:4px;
+  box-shadow:0 5px 15px rgba(34,197,94,0.4);
+  text-shadow:0 2px 4px rgba(0,0,0,0.3);
+">
+    Plan Your Trip
+</div>
+</p>
+<hr>
+
+
+              <div class="post-item">
+               <p> <h4><a href="blog-details.html">Wildlife Safari</a></h4>
+                </p>
+       <p><img src="img/zebra.jpg" class="swipebox" class="attachment-shop_single size-shop_single wp-post-image" alt="" title="" draggable="false" alt="logo" width="100%" height="220" class="logo_sticky">
+        </p>
+        <time datetime="2020-01-01">Posted</time>
+                 
+
+              </div><!-- End recent post item-->
+              <hr>
+
+              <div class="post-item">
+              <p> <h4><a href="blog-details.html">Hunting Safari</a></h4>
+               </p> 
+                <p> <img src="img/hunting.jpg" alt="logo" width="100%" height="220" class="logo_sticky">
+        
+                  
+        </p>            <time datetime="2020-01-01">Posted</time>
+              </div><!-- End recent post item-->
+              <hr>
+
+              <div class="post-item">
+               <p> <h4><a href="blog-details.html">Mountain Biking</a></h4>
+               </p><p>  <img src="img/route3.jpg" alt="logo" width="100%" height="220" class="logo_sticky">
+        
+            </p><time datetime="2020-01-01">Posted</time>
+              
+              </div><!-- End recent post item-->
+              <hr>
+
+              <div class="post-item">
+               <p> <h4><a href="blog-details.html">Cultural Tourism</a></h4>
+                  </p><p>  <img src="img/historical.jpg" alt="logo" width="100%" height="220" class="logo_sticky">
+        
+            </p><time datetime="2020-01-01">Posted</time>
+              </div><!-- End recent post item-->
+                <hr>
+           
+
+               <div class="post-item">
+               <p> <h4><a href="blog-details.html">Birding Safari</a></h4>
+               </p><p>  <img src="img/did1.jpg" alt="logo" width="100%" height="220" class="logo_sticky">
+        
+            </p><time datetime="2020-01-01">Posted</time>
+              
+              </div><!-- End recent post item-->
+              <hr>
+               <div class="post-item">
+               <p> <h4><a href="blog-details.html">Balloon Safari</a></h4>
+               </p><p>  <img src="img/Balloon-Safaris.jpg" alt="logo" width="100%" height="220" class="logo_sticky">
+        
+            </p><time datetime="2020-01-01">Posted</time>
+              
+              </div><!-- End recent post item-->
+              <hr>
+
+        </div>
+
+      </div>
+    </div>
+
+</div>
+
+
+</div>
+
+
+<!-- Our Partners Section -->
+<section class="section clients">
+    <div class="container">
+        <div class="section-title text-center">
+            <h2>Our Partners</h2>
+            <div class="divider mx-auto my-4"></div>
+            <p>We are proud to work with our trusted partners.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="clients-slider">
+
+            <div class="client-thumb">
+                <img src="img/boardtourism.png" alt="Board of Tourism">
+            </div>
+
+            <div class="client-thumb">
+                <img src="img/thblogo.png" alt="NMB">
+            </div>
+
+            <div class="client-thumb">
+                <img src="img/ministrytourism.png" alt="Muhimbili National Hospital">
+            </div>
+
+            <div class="client-thumb">
+                <img src="img/tanapalogo.png" alt="KCMC">
+            </div>
+
+            <div class="client-thumb">
+                <img src="img/ngorongorologo.png" alt="Benjamin Mkapa">
+            </div>
+
+            <div class="client-thumb">
+                <img src="img/tripadvisorlogo.png" alt="Mawenzi">
+            </div>
+
+            <div class="client-thumb">
+                <img src="img/logotanzania.png" alt="CCBRT">
+            </div>
+
+            <div class="client-thumb">
+                <img src="img/investmentlogo.png" alt="MOI">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Slick Carousel CSS -->
+<link rel="stylesheet"
+ href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+
+<link rel="stylesheet"
+ href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+
+<!-- Custom CSS -->
+<style>
+.clients {
+    padding: 60px 0;
+    background: #fff;
+    overflow: hidden;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #222;
+}
+
+.section-title p {
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.divider {
+    width: 50px;
+    height: 4px;
+    background: #e12454;
+    border-radius: 5px;
+}
+
+.clients-slider {
+    margin: 30px 15px 0;
+}
+
+.client-thumb {
+    height: 130px;
+    margin: 10px;
+    padding: 20px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.client-thumb:hover {
+    border-color: #e12454;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transform: translateY(-4px);
+}
+
+.client-thumb img {
+    display: block;
+    max-width: 100%;
+    max-height: 85px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    margin: auto;
+}
+
+/* Slider arrows */
+.clients-slider .slick-prev,
+.clients-slider .slick-next {
+    z-index: 2;
+    width: 35px;
+    height: 35px;
+}
+
+.clients-slider .slick-prev {
+    left: -30px;
+}
+
+.clients-slider .slick-next {
+    right: -30px;
+}
+
+.clients-slider .slick-prev:before,
+.clients-slider .slick-next:before {
+    color: #e12454;
+    font-size: 30px;
+    opacity: 1;
+}
+
+/* Pagination dots */
+.clients-slider .slick-dots {
+    bottom: -35px;
+}
+
+.clients-slider .slick-dots li button:before {
+    font-size: 10px;
+    color: #e12454;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .clients {
+        padding: 40px 0;
+    }
+
+    .section-title h2 {
+        font-size: 26px;
+    }
+
+    .client-thumb {
+        height: 110px;
+        margin: 8px;
+        padding: 15px;
+    }
+
+    .client-thumb img {
+        max-height: 70px;
+    }
+
+    .clients-slider .slick-prev {
+        left: -15px;
+    }
+
+    .clients-slider .slick-next {
+        right: -15px;
+    }
+}
+</style>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<!-- Slick Carousel JS -->
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<!-- Initialize Slider -->
+<script>
+$(document).ready(function () {
+    $('.clients-slider').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        speed: 600,
+        infinite: true,
+        arrows: true,
+        dots: true,
+        pauseOnHover: true,
+        pauseOnFocus: true,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 4
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 2
+                }
+            }
+        ]
+    });
+});
+</script>
+
+
+
+  <!-- ==================== GUIDES ==================== -->
+  <section class="section guides" id="guides" aria-labelledby="guides-title">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <div>
+          <span class="eyebrow on-dark">Accomodation Info</span>
+          <h2 class="h-sec" id="guides-title">We're also making sure for the best Accomodation</h2>
+        </div>
+        <p class="lead">Our Team always is here to make a comfort to our Travellers through the best Accomodation matters during their adventures</p>
+      </div>
+
+      <div class="guides-grid">
+        <article class="guide reveal">
+          <div class="guide-photo">
+            <span class="guide-tag">Read More</span>
+            <img src="img/lodge.jpg" width="600" height="600" alt="Portrait of Kasper Lindqvist, lead alpine guide" loading="lazy">
+          </div>
+          <div class="guide-body">
+            <h3>Luxury Lodges</h3>
+            <div class="role"></div>
+            <div class="guide-facts">
+              <div class="f"><div class="v">Status</div><div class="k">Classic</div></div>
+              <div class="f"><div class="v">50+</div><div class="k">Capacity</div></div>
+            </div>
+          </div>
+        </article>
+        <article class="guide reveal d1">
+          <div class="guide-photo">
+            <span class="guide-tag">Read More</span>
+            <img src="img/hotel.jpg" width="600" height="600" alt="Portrait of Camila Herrera, Patagonia trekking specialist" loading="lazy">
+          </div>
+          <div class="guide-body">
+            <h3>Hotels</h3>
+            <div class="role"></div>
+            <div class="guide-facts">
+             <div class="f"><div class="v">Status</div><div class="k">Classic</div></div>
+              <div class="f"><div class="v">70+</div><div class="k">Capacity</div></div>
+            </div>
+          </div>
+        </article>
+        <article class="guide reveal d2">
+          <div class="guide-photo">
+            <span class="guide-tag">Read More</span>
+            <img src="img/hostel.jpg" width="600" height="600" alt="Portrait of Emeka Okoro, safari and wildlife lead guide" loading="lazy">
+          </div>
+          <div class="guide-body">
+            <h3>Hostels</h3>
+            <div class="role"></div>
+            <div class="guide-facts">
+              <div class="f"><div class="v">Status</div><div class="k">Classic</div></div>
+              <div class="f"><div class="v">60+</div><div class="k">Capacity</div></div>
+            </div>
+          </div>
+        </article>
+        <article class="guide reveal d3">
+          <div class="guide-photo">
+            <span class="guide-tag">Read More</span>
+            <img src="img/apartment.jpg" width="600" height="600" alt="Portrait of Sigrid Dahl, sea-kayak expedition guide" loading="lazy">
+          </div>
+          <div class="guide-body">
+            <h3>Apartments</h3>
+            <div class="role"></div>
+            <div class="guide-facts">
+                <div class="f"><div class="v">Status</div><div class="k">Classic</div></div>
+              <div class="f"><div class="v">80+</div><div class="k">Capacity</div></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== REVIEWS ==================== -->
+  <section class="section reviews" id="reviews" aria-labelledby="reviews-title">
+    <div class="wrap">
+      <div class="reviews-head reveal">
+        <div>
+          <span class="eyebrow">Traveller stories</span>
+          <h2 class="h-sec" id="reviews-title">2,100 trips. 4.9 out of 5.</h2>
+        </div>
+        <div class="slider-nav">
+          <button class="slider-btn" id="rPrev" aria-label="Previous review"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button class="slider-btn" id="rNext" aria-label="Next review"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </div>
+
+      <div class="slider reveal">
+        <div class="slider-track" id="rTrack" tabindex="0" aria-label="Traveller reviews, scrollable">
+          <figure class="review">
+            <div class="stars" aria-label="Rated 5 out of 5">★★★★★</div>
+            <blockquote>The 'W' trek was the hardest, best week of my year. Our guide read the Patagonian weather like a book and turned a washout forecast into blue-sky summits.</blockquote>
+            <figcaption class="who">
+              <img src="img/rev1.jpg" width="48" height="48" alt="">
+              <div><div class="n">Marcus Reid</div><div class="trip">Indonesia</div></div>
+            </figcaption>
+          </figure>
+          <figure class="review">
+            <div class="stars" aria-label="Rated 5 out of 5">★★★★★</div>
+            <blockquote>Walking the Serengeti instead of driving it changed everything. You feel the scale on foot. Small camp, brilliant ranger, and not another vehicle in sight for days.</blockquote>
+            <figcaption class="who">
+              <img src="img/rev2.jpg" width="48" height="48" alt="">
+              <div><div class="n">Priya Raman</div><div class="trip">Australia</div></div>
+            </figcaption>
+          </figure>
+          <figure class="review">
+            <div class="stars" aria-label="Rated 5 out of 5">★★★★★</div>
+            <blockquote>I'd never kayaked before Lofoten and never felt unsafe. Rune paced it perfectly, the cabins were straight off a postcard, and the midnight sun paddle was unreal.</blockquote>
+            <figcaption class="who">
+              <img src="img/rev3.jpg" width="48" height="48" alt="">
+              <div><div class="n">Daniel Bergström</div><div class="trip">Germany</div></div>
+            </figcaption>
+          </figure>
+          <figure class="review">
+            <div class="stars" aria-label="Rated 5 out of 5">★★★★★</div>
+            <blockquote>Serious mountain days, seriously well run. The glacier skills training on day one meant I trusted the team completely by the time we hit the big crossings.</blockquote>
+            <figcaption class="who">
+              <img src="img/rev4.jpg" width="48" height="48" alt="">
+              <div><div class="n">Hannah Prescott</div><div class="trip">Denmark</div></div>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+ <button class="chat-button" onclick="toggleChat()">💬</button>
+
+  <div class="chat-box" id="chatBox">
+    <div class="chat-header">
+    <font size=3>TanTrip Tours & Safaris AI Assistant</font>
+    </div>
+
+    <div class="messages" id="messages">
+      <div class="message bot">
+        Hello! 👋 Welcome to TanTrip Tours and Safaris. How can I help you today?
+      </div>
+    </div>
+
+    <div class="input-area">
+      <input
+        id="messageInput"
+        type="text"
+        placeholder="Type your message..."
+        onkeydown="if(event.key === 'Enter') sendMessage()"
+      />
+
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <script>
+    function toggleChat() {
+      const chat = document.getElementById("chatBox");
+
+      chat.style.display =
+        chat.style.display === "block" ? "none" : "block";
+    }
+
+    async function sendMessage() {
+      const input = document.getElementById("messageInput");
+      const messages = document.getElementById("messages");
+
+      const message = input.value.trim();
+
+      if (!message) return;
+
+      // Show user message
+      messages.innerHTML += `
+        <div class="message user">
+          ${escapeHtml(message)}
+        </div>
+      `;
+
+      input.value = "";
+
+      // Loading message
+      const loading = document.createElement("div");
+      loading.className = "message bot";
+      loading.textContent = "Typing...";
+      messages.appendChild(loading);
+
+      messages.scrollTop = messages.scrollHeight;
+
+      try {
+        const response = await fetch("/api/chat", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            message: message
+          })
+        });
+
+        const data = await response.json();
+
+        loading.remove();
+
+        messages.innerHTML += `
+          <div class="message bot">
+            ${escapeHtml(data.reply)}
+          </div>
+        `;
+
+      } catch (error) {
+        loading.textContent =
+          "Please wait while We're working on your Question!";
+      }
+
+      messages.scrollTop = messages.scrollHeight;
+    }
+
+    function escapeHtml(text) {
+      const div = document.createElement("div");
+      div.textContent = text;
+      return div.innerHTML;
+    }
+  </script>
+
+ <!-- Modal -->
+<div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-6 fw-bold fs-5" id="exampleModalLabel1">TOTAL CASH COLLECTION 1</h1>
+      <hr>
+          
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        
+        <div class="modal-body">
+            
+          <ul class="molist">
+            
+            <li><b><a href=""><font size=2 color="black">Total Cash Collection [ date Range: From 1 January - 31 December 2021]</font></a></b></li>
+        <li><b><a href=""><font size=2 color="black">Total Cash Collection [ date Range: From 1 January - 31 December 2022]</font></a></b></li>
+        <li><b><a href=""><font size=2 color="black">Total Cash Collection [ date Range: From 1 January - 31 December 2023]</font></a></b></li>
+        
+        
+              <hr>
+              
+            </ul>
+
+          </ul>
+          
+        
+          <p><b> <font color="black" size=2>Please, Click to View Total Cash Collection for a Certain Time Range</font></b></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-6 fw-bold fs-5" id="exampleModalLabel1">TREKS</h1>
+      <hr>
+          
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        
+        <div class="modal-body">
+            
+          <ul class="molist">
+            
+            <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="orange" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z" clip-rule="evenodd"/>
+</svg>
+ <b>
+        <font size=2 color="black">Kilimanjaro Route</font></b>
+                <ul>
+                  <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+
+ <a href="marangu.html"><font color="black">Marangu Route</font></a></li>
+                     <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="machame.html"><font color="black">Machame Route</font></a></li>
+                     <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="rongai.html"><font color="black">Rongai Route</font></a></li>
+                     <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="umbwe.html"><font color="black">Umbwe Route</font></a></li>
+                      <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="lemosho.html"><font color="black">Lemosho Route</font></a></li>
+                     <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="northerncircuit.html"><font color="black">Northern Circuit Route</font></a></li>
+                 <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="shira.html"><font color="black">Shira Route</font></a></li>
+              
+              
+                    </ul>
+      </li>
+        <li>
+ <b><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="orange" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z" clip-rule="evenodd"/>
+</svg> <a href=""><font size=2 color="black">Mount Meru</font></a></b></li>
+        <li>
+ <b><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="orange" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z" clip-rule="evenodd"/>
+</svg> <a href=""><font size=2 color="black">Kilimanjaro Weather</font></a></b></li>
+         <li>
+ <b><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="orange" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z" clip-rule="evenodd"/>
+</svg> <a href=""><font size=2 color="black">Best Time To Climb</font></a></b></li>
+        <li>
+ <b><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="orange" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z" clip-rule="evenodd"/>
+</svg> <a href=""><font size=2 color="black">Trekking Preparations</font></a></b></li>
+        
+         <li>
+ <b><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="orange" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z" clip-rule="evenodd"/>
+</svg> <a href=""><font size=2 color="black">Mt. Kilimanjaro Gears</font></a></b></li>
+        <li>
+ <b><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="orange" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z" clip-rule="evenodd"/>
+</svg> <a href=""><font size=2 color="black">Kilimanjaro Fitness</font></a></b></li>
+         <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="orange" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z" clip-rule="evenodd"/>
+</svg> <b><font size=2 color="black">Attitude Sickness</font></a></b></li>
+        
+            </ul>
+
+          </ul>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- Modal -->
+<div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-6 fw-bold fs-5" id="exampleModalLabel3">SAFARI</h1>
+      <hr>
+          
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        
+        <div class="modal-body">
+            
+          <ul class="molist">
+            
+            <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="orange" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z" clip-rule="evenodd"/>
+</svg> <b><a href=""><font size=2 color="black">Tanzania Safari</font></a></b>
+                <ul>
+                  <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="1to4safari.html"><font color="black">1 To 4 Days Trip Safari</font></a></li>
+                     <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="5to8safari.html"><font color="black">5 To 8 Trip Safari</font></a></li>
+                     <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="9to14safari.html"><font color="black">9 To 14 Trip Safari</font></a></li>
+                  
+              
+                    </ul></li>
+        <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="orange" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z" clip-rule="evenodd"/>
+</svg> <b><a href=""><font size=2 color="black">Wildebeest Migration</font></a></b>
+         <ul>
+                  <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="5dayswildbeest.html"><font color="black">5 Days Wildbeest Migration Safari</font></a></li>
+                   <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="7dayswildbeest.html"><font color="black">7 Days Wildbeest Migration Safari</font></a></li>
+                   <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="9dayswildbeest.html"><font color="black">9 Days Wildbeest Migration Safari</font></a></li>
+                   <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="14dayswildbeest.html"><font color="black">14 Days Wildbeest Migration Safari</font></a></li>
+                   
+              
+                    </ul></li>
+        <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="orange" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z" clip-rule="evenodd"/>
+</svg> <b><a href=""><font size=2 color="black">Kenya Tanzania Safari</font></a></b>  <ul>
+                  <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="8to12kenyatanzania.html"><font color="black">8 To 12 Days Kenya Tanzania Safari</font></a></li>
+                 <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="14kenyatanzania.html"><font color="black">14 Days Kenya Tanzania Safari</font></a></li>
+               
+              
+                    </ul></li>
+        <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="orange" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z" clip-rule="evenodd"/>
+</svg> <b><a href=""><font size=2 color="black">Safari & Zanzibar</font></a></b>
+        <ul>
+                  <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="6to8zanzibar.html"><font color="black">6 To 8 Days Safari & Zanzibar</font></a></li>
+                  <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg> <a href="12zanzibar.html"><font color="black">12 Days Safari & Zanzibar</font></a></li>
+                
+              
+                    </ul></li>
+        <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="orange" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z" clip-rule="evenodd"/>
+</svg> <b><a href=""><font size=2 color="black">Southern Tanzania</font></a></b>
+         <ul>
+                  <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="3to9southern.html"><font color="black">6 To 8 Days Southern Tanzania Safari</font></a></li>
+                  
+              
+                    </ul></li>
+        <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="orange" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z" clip-rule="evenodd"/>
+</svg> <b><a href=""><font size=2 color="black">Gorilla Trekking</font></a></b></li>
+       
+            </ul>
+
+          </ul>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-6 fw-bold fs-5" id="exampleModalLabel4">THINGS TO DO</h1>
+      <hr>
+          
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        
+        <div class="modal-body">
+            
+          <ul class="molist">
+            
+            <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="orange" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z" clip-rule="evenodd"/>
+</svg> <b><a href=""><font size=2 color="black">Activities</font></a></b>
+             <ul>
+                  <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="walkingsafari.html"><font color="black">Walking Safari</font></a></li>
+                     <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="wildlifesafari.html"><font color="black">Wildlife Safari</font></a></li>
+                     <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="mountainbiking.html"><font color="black">Mountain Biking</font></a></li>
+                     <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="photographicsafari.html"><font color="black">Photographic Safari</font></a></li>
+                      <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="historicalsites.html"><font color="black">Historical Sites</font></a></li>
+                     <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="shopping.html"><font color="black">Shopping & Nightlife</font></a></li>
+                 <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="fishing.html"><font color="black">Fishing</font></a></li>
+                <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="culturaltourism.html"><font color="black">Cultural Tourism</font></a></li>
+                      <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="diving.html"><font color="black">Diving & Snorkelling</font></a></li>
+                     <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="conferencetourism.html"><font color="black">Conference Tourism</font></a></li>
+                 <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="balloonsafari.html"><font color="black">Balloon Safari</font></a></li>
+                <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="beachholiday.html"><font color="black">Beach Holiday</font></a></li>
+              
+              
+                    </ul></li>
+        <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="orange" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z" clip-rule="evenodd"/>
+</svg> <b><a href=""><font size=2 color="black">Holiday Types</font></a></b>
+          <ul>
+                  <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="luxurysafari.html"><font color="black">Luxury Safari</font></a></li>
+                     <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="campingsafari.html"><font color="black">Camping Safari</font></a></li>
+                     <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="weddingsafari.html"><font color="black">Wedding Safari</font></a></li>
+                     <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="darkgreen" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M11.403 5H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6.403a3.01 3.01 0 0 1-1.743-1.612l-3.025 3.025A3 3 0 1 1 9.99 9.768l3.025-3.025A3.01 3.01 0 0 1 11.403 5Z" clip-rule="evenodd"/>
+  <path fill-rule="evenodd" d="M13.232 4a1 1 0 0 1 1-1H20a1 1 0 0 1 1 1v5.768a1 1 0 1 1-2 0V6.414l-6.182 6.182a1 1 0 0 1-1.414-1.414L17.586 5h-3.354a1 1 0 0 1-1-1Z" clip-rule="evenodd"/>
+</svg>
+ <a href="nightgamedrives.html"><font color="black">Night Game Drives</font></a></li>
+                    
+              
+                    </ul></li>
+       
+        
+            </ul>
+
+          </ul>
+          
+        
+       
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-6 fw-bold fs-5" id="exampleModalLabel5">PLAN YOUR TRIP</h1>
+      <hr>
+          
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        
+        <div class="modal-body">
+            
+           
+          <ul class="molist">
+            
+            <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="orange" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z" clip-rule="evenodd"/>
+</svg> <b><a href="visa.html"><font size=2 color="black">VISA Information</font></a></b></li>
+        <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="orange" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z" clip-rule="evenodd"/>
+</svg> <b><a href="accomodation.html"><font size=2 color="black">Accomodations</font></a></b></li>
+        <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="orange" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z" clip-rule="evenodd"/>
+</svg> <b><a href="packing.html"><font size=2 color="black">Packing Guide</font></a></b></li>
+         <li><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="orange" viewBox="0 0 24 24">
+  <path fill-rule="evenodd" d="M12 2c-.791 0-1.55.314-2.11.874l-.893.893a.985.985 0 0 1-.696.288H7.04A2.984 2.984 0 0 0 4.055 7.04v1.262a.986.986 0 0 1-.288.696l-.893.893a2.984 2.984 0 0 0 0 4.22l.893.893a.985.985 0 0 1 .288.696v1.262a2.984 2.984 0 0 0 2.984 2.984h1.262c.261 0 .512.104.696.288l.893.893a2.984 2.984 0 0 0 4.22 0l.893-.893a.985.985 0 0 1 .696-.288h1.262a2.984 2.984 0 0 0 2.984-2.984V15.7c0-.261.104-.512.288-.696l.893-.893a2.984 2.984 0 0 0 0-4.22l-.893-.893a.985.985 0 0 1-.288-.696V7.04a2.984 2.984 0 0 0-2.984-2.984h-1.262a.985.985 0 0 1-.696-.288l-.893-.893A2.984 2.984 0 0 0 12 2Zm3.683 7.73a1 1 0 1 0-1.414-1.413l-4.253 4.253-1.277-1.277a1 1 0 0 0-1.415 1.414l1.985 1.984a1 1 0 0 0 1.414 0l4.96-4.96Z" clip-rule="evenodd"/>
+</svg> <b><a href="faq.html"><font size=2 color="black">FAQ's</font></a></b></li>
+        
+        
+                            
+            </ul>
+
+          </ul>
+          
+        
+        
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+
+
+
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="#top" aria-label="Compass — home">
+            <img src="logotantrip.png" alt="logo" width="40" height="40" class="logo_sticky">
+
+          About Us
+        </a>
+        <p>Discover the pureness of nature and the circle of life as they appear right in front of you. See the world at 5896m Mt Kilimanjaro a magnificent sights.</p>
+        <div class="footer-social">
+          <a href="#top" aria-label="Compass on Instagram"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/></svg></a>
+          <a href="#top" aria-label="Compass on YouTube"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4" stroke="currentColor" stroke-width="1.8"/><path d="M10 9.5l5 2.5-5 2.5z" fill="currentColor"/></svg></a>
+          <a href="#top" aria-label="Compass on Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.6l.4-3h-3V8.1c0-.9.3-1.5 1.6-1.5H17V4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.1H8.2v3h2.6v8z"/></svg></a>
+          <a href="#top" aria-label="Compass on X"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 3h3l-7.2 8.2L22 21h-6.3l-4.9-6.4L4.9 21H2l7.7-8.8L2 3h6.5l4.4 5.8zm-1.1 16h1.7L7.6 4.8H5.8z"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Information</h4>
+        <ul>
+          <li><a href="#tours">Mount Kilimanjaro Route</a></li>
+          <li><a href="#tours">Tanzania Safari</a></li>
+          <li><a href="#tours">Kenya Tanzania Safari</a></li>
+          <li><a href="#tours">Zanzibar Beach</a></li>
+         
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Our Menu</h4>
+        <ul>
+          <li><a href="#why">Accomodation</a></li>
+          <li><a href="#guides">VISA Information</a></li>
+          <li><a href="#how">FAQ's</a></li>
+          <li><a href="#reviews">Packing Guide</a></li>
+          <li><a href="#enquire">Book Now</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Get in touch</h4>
+        <ul class="footer-contact">
+          <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-5.7 7-11a7 7 0 10-14 0c0 5.3 7 11 7 11z" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.8"/></svg> Arusha, TANZANIA</li>
+          <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 5c0 8.3 6.7 15 15 15v-3.5l-4-1.5-2 2a12 12 0 01-6-6l2-2L11.5 5H4z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg> <a href="https://wa.me/255766909822"><font color="white">(+255) 766 909 822</font></a </li>
+          <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><a href="mailto: info@tantriptours.com"><font color="white">info@tantriptours.com</font></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&copy; 2026 TanTrip Tours & Safari. All rights reserved.</span>
+      <span>Developed by <a href="https://fmpiza.github.io/webfridolin" rel="noopener"><font color="orange">Fridolin</font></a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/vendor/bootstrap.bundle.min.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>
