@@ -110,7 +110,77 @@
       color: white;
       cursor: pointer;
     }
+
+
+
+    /* Hero background slideshow */
+.hero {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -2;
+}
+
+.hero-bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.40);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.hero-slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    opacity: 0;
+    transform: scale(1.05);
+    transition:
+        opacity 1.5s ease-in-out,
+        transform 6s ease;
+
+    display: block;
+}
+
+.hero-slide.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Keep hero text and form above the slideshow */
+.hero-contour,
+.hero .wrap {
+    position: relative;
+    z-index: 2;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .hero-slide {
+        object-position: center;
+    }
+}
+
+/* Accessibility: respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .hero-slide {
+        transition: none;
+    }
+}
   </style>
+
 
 
 
@@ -184,9 +254,37 @@
 
   <!-- ============================ HERO ============================ -->
   <section class="hero" aria-labelledby="hero-title">
-    <div class="hero-bg" aria-hidden="true">
-      <img src="img/hero.jpg" width="1600" height="1000" alt="" fetchpriority="high">
-    </div>
+    <!-- Hero Background Image Slideshow -->
+<div class="hero-bg" aria-hidden="true">
+    <img src="img/hero.jpg"
+         class="hero-slide active"
+         alt=""
+         width="1600"
+         height="1000"
+         fetchpriority="high">
+
+    <img src="img/girrafe.jpeg"
+         class="hero-slide"
+         alt=""
+         width="1600"
+         height="1000"
+         loading="lazy">
+
+    <img src="img/zebra.jpg"
+         class="hero-slide"
+         alt=""
+         width="1600"
+         height="1000"
+         loading="lazy">
+
+    <img src="img/cyclingtourism.jpg"
+         class="hero-slide"
+         alt=""
+         width="1600"
+         height="1000"
+         loading="lazy">
+</div>
+
     <div class="hero-contour" aria-hidden="true">
       <svg viewBox="0 0 700 600" preserveAspectRatio="xMidYMid slice">
         <path d="M40 560 C180 500 300 540 400 470 C520 388 600 430 700 360"/>
@@ -204,8 +302,8 @@
           TanTrip-in Tanzania · TanTrip Worldwide
         </span>
           
-        <h1 id="hero-title" class="reveal d1">Let's Enjoy Your Trip with <em>TanTrip Tours</em> & Safari</h1>
-        <p class="hero-sub reveal d1">In the meanwhile, TanTrip Tours and Safaris welcome you to enjoy the hospitality and good customer care so as to make sure our customer tend to reach on his expectation</p>
+        <h1 id="hero-title" class="reveal d1">Enjoy Your Trip with <em>TanTrip Tours</em> & Safari</h1>
+        <p class="hero-sub reveal d1">TanTrip Tours and Safaris welcomes you to enjoy the Tanzania hospitality and We are devoted to excellent Customer care to assist you attain your Expectations </p>
         <div class="hero-trust reveal d2">
           <span class="stars" aria-hidden="true">★★★★★</span>
           <span><b>4.9/5</b> from 2,100+ travellers</span>
@@ -1379,6 +1477,28 @@ $(document).ready(function () {
       return div.innerHTML;
     }
   </script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const slides = document.querySelectorAll(".hero-slide");
+
+    if (slides.length <= 1) return;
+
+    let currentSlide = 0;
+
+    function showNextSlide() {
+        slides[currentSlide].classList.remove("active");
+
+        currentSlide = (currentSlide + 1) % slides.length;
+
+        slides[currentSlide].classList.add("active");
+    }
+
+    // Change the background image every 5 seconds
+    setInterval(showNextSlide, 5000);
+});
+</script>
 
  <!-- Modal -->
 <div class="modal fade" id="exampleModal9" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
